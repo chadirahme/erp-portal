@@ -1,6 +1,6 @@
 # SB Admin rewritten in Angular6 and Bootstrap 4
 
-Simple Dashboard Admin App built using Angular 6 and Bootstrap 4
+ERP Dashboard Admin App built using Angular 6 and Bootstrap 4
 
 This project is a port of the famous Free Admin Bootstrap Theme [SB Admin v6.0](http://startbootstrap.com/template-overviews/sb-admin-2/) to Angular5 Theme.
 
