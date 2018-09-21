@@ -10,6 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthGuard } from './shared';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { HeroFormComponent } from './hero-form/hero-form.component';
 
 // AoT requires an exported function for factories
 export const createTranslateLoader = (http: HttpClient) => {
@@ -39,7 +40,7 @@ export const createTranslateLoader = (http: HttpClient) => {
         }),
         AppRoutingModule
     ],
-    declarations: [AppComponent],
+    declarations: [AppComponent, HeroFormComponent],
     providers: [AuthGuard],
     bootstrap: [AppComponent]
 })
