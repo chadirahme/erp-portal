@@ -40,7 +40,7 @@ export const createTranslateLoader = (http: HttpClient) => {
         }),
         AppRoutingModule
     ],
-    declarations: [AppComponent, HeroFormComponent],
+    declarations: [AppComponent], // HeroFormComponent
     providers: [AuthGuard],
     bootstrap: [AppComponent]
 })
