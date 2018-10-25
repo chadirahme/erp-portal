@@ -1,0 +1,34 @@
+version: '3.3'
+
+services:
+
+ eureka-serviceregistry:
+  build: ./server
+  ports:
+   - "8761:8761"
+  tty:
+    true
+  restart:
+    unless-stopped
+
+ spring-boot-admin:
+  build: ./data
+  ports:
+   - "8080:8080"
+  environment:
+    - REGISTRY_HOST=eureka-serviceregistry
+  tty:
+    true
+  restart:
+    unless-stopped 
+
+ spring-boot-business:
+  build: ./business
+  ports:
+    - "8100:8100"
+  environment:
+    - REGISTRY_HOST=eureka-serviceregistry
+  tty:
+    true
+  restart:
+    unless-stopped
